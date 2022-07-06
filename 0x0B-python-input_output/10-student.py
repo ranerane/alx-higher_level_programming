@@ -39,19 +39,3 @@ class Student():
                 result[attr] = value
 
         return (result)
-
-    def reload_from_json(self, json):
-        """
-        Update all public instance attributes
-        Args:
-          - json: dict
-        """
-        dict_des = self.__dict__
-
-        for key, value in json.items():
-            if (dict_des.get(key) == self.first_name):
-                self.first_name = value
-            elif (dict_des.get(key) == self.last_name):
-                self.last_name = value
-            elif (dict_des.get(key) == self.age):
-                self.age = value
